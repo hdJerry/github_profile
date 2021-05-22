@@ -81,11 +81,14 @@ const getProfile = (user) => {
     
         
     let auth = {
-        "Authorization": `Bearer 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`
+        "Authorization": `token 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`
     }
 
     fetch('https://api.github.com/graphql', {
             method: 'POST',
+            mode: "cors",
+            cache: "no-cache",
+            referrerPolicy: "no-referrer",
             headers: {
                 'Content-Type': 'application/json',
                 ...auth,
