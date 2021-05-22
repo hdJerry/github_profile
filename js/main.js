@@ -1,5 +1,8 @@
 let user = sessionStorage.getItem('user');
 
+const CLIENT_ID="69ade597d283d5c5c8b9";
+const CLIENT_SECRET="752d09a70235b7c3b20b3602e9910e15223204e2";
+
 
 
 const ProfilePage = async () => {
@@ -62,7 +65,7 @@ const getProfile = (user) => {
     
         
     let auth = {
-        "Authorization": `Bearer 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`
+        "Authorization": `token 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`
     }
 
     fetch('https://api.github.com/graphql', {
