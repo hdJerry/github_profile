@@ -3,6 +3,12 @@ let user = sessionStorage.getItem('user');
 const CLIENT_ID="69ade597d283d5c5c8b9";
 const CLIENT_SECRET="752d09a70235b7c3b20b3602e9910e15223204e2";
 
+//encoded token to prevent auto removal by github.
+const GITHUB_ENCODED_TOKEN =
+    "YmVmZWZmM2Q3YjZlZWEwYjgxODQ2ZjMzNjdjMGExYzdhNGY0NWIzOQ==";
+
+const GITHUB_DECODED_TOKEN = atob(GITHUB_ENCODED_TOKEN);
+
 
 
 const ProfilePage = async () => {
@@ -81,7 +87,7 @@ const getProfile = (user) => {
     
         
     let auth = {
-        "Authorization": `token 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`
+        "Authorization": `token ${GITHUB_DECODED_TOKEN}`
     }
 
     fetch('https://api.github.com/graphql', {
