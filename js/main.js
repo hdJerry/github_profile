@@ -51,11 +51,27 @@ const ProfilePage = async () => {
                         <p class="bio">${user.bio || ''}</p>
                     </div>
                 </div>
-                <div class="right"></div>
+                <div class="right" id="repos">
+                    
+                </div>
             </div>
 
         </div>
     `;
+
+
+    let repo_container = document.querySelector('#repos');
+    user.repositories.edges.forEach((res) => {
+        let div = document.createElement('div');
+        div.setAttribute('class', 'repo');
+        div.innerHTML = `
+            <p>${res.node.name}</p>
+            <p>${res.node.description}</p>
+        `;
+
+        repo_container.appendChild(div);
+    })
+
 
 };
 
@@ -65,7 +81,7 @@ const getProfile = (user) => {
     
         
     let auth = {
-        "Authorization": `token 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`
+        "Authorization": `Bearer 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`
     }
 
     fetch('https://api.github.com/graphql', {
@@ -96,7 +112,7 @@ const getProfile = (user) => {
                             name
                             forkCount
                             stargazerCount
-
+                            description
                             languages(first: 1) {
                                 nodes {
                                     name

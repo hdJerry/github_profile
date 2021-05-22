@@ -223,8 +223,10 @@ font-weight: bold;
 }
 
 #main #profile .right {
+    margin-top: 150px;
     width: 70%;
-    height: 400px;
+    height: 600px;
+    overflow-y: auto;
     /* background-color: #7263ca; */
 }
 
@@ -236,4 +238,11 @@ font-weight: bold;
     height: 1px;
     background-color: #eaecef;
     z-index: -10;
+}
+
+
+#main #profile .right .repo {
+    padding: 10px;
+    min-height: 70px;
+    border-bottom: 1px solid #eaecef;
 }
