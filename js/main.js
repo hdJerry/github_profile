@@ -65,7 +65,7 @@ const getProfile = (user) => {
     
         
     let auth = {
-        "Authorization": `token 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`
+        "Authorization": `token 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`
     }
 
     fetch('https://api.github.com/graphql', {
