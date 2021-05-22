@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --primary-color: #0d1117;
+    --secondary-color: #7263ca;
+    --tertiary-color: #161b22;
+    --color-text-primary: #24292e;
+}
+
+body{
+    /* background-color: var(--primary-color); */
+    font-family: -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Helvetica,
+    Arial,
+    sans-serif,
+    Apple Color Emoji,
+    Segoe UI Emoji;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-text-primary);
+    overflow-x: hidden;
+}
+
+
+.login {
+    margin: 15% auto;
+    width: 300px;
+    height: 150px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    background-color: var(--tertiary-color);
+    padding: 10px;
+}
+
+.login label {
+    color: #fff;
+
+}
+
+.login .input {
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border: 1px solid #444d56;
+    padding: 5px 10px;
+    min-height: 28px;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.login .input input {
+    border: none;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    background-color: var(--tertiary-color);
+
+}
+
+.login #submit {
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    border: unset;
+    outline: none;
+    color: var(--tertiary-color);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+.login #submit:disabled {
+    cursor: not-allowed;
+}
+
+
+/* Main part */
+
+
+#main .navbar{
+    width: 100%;
+    height: 60px;
+    background-color: var(--color-text-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+#main .navbar .logo {
+    fill: #fff;
+}
+
+#main .navbar .nav_right .nav_pics {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: relative;
+}
+
+#main .navbar .nav_right .nav_pics img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+#main #profile {
+    max-width: 1440px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items:  flex-start;
+    flex-flow: row wrap;
+    margin-top: 40px;
+}
+
+#main #profile .left {
+    width: 30%;
+    height: 400px;
+    /* background-color: #fff; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#main #profile .left #pics {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+#main #profile .left #pics .status {
+    position: absolute;
+    bottom: 30px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 1px solid #8b949e;
+    background-color: #fff;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main #profile .left #pics img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+#main #profile .left .info {
+    width: 250px;
+    margin-top: 10px;
+}
+
+#main #profile .left .info .name {
+font-size: 26px;
+line-height: 1.25;
+font-weight: bold;
+}
+
+#main #profile .left .info .username {
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 300;
+   line-height: 24px;
+   color:#8b949e;
+}
+
+#main #profile .left .info .bio {
+    margin-top: 10px;
+    font-size: 16px
+}
+
+#main #profile .right {
+    width: 70%;
+    height: 400px;
+    /* background-color: #7263ca; */
+}
+
+.hr {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 120px;
+    height: 1px;
+    background-color: #eaecef;
+    z-index: -10;
+}
