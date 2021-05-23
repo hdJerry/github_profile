@@ -408,6 +408,35 @@ font-weight: bold;
     font-family: inherit;
 }
 
+.new_repo{
+    background-color: #2ea44f;
+    justify-content: space-between;
+    color: #fff;
+
+    position: relative;
+    padding: 5px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin-left: 10px;
+}
+
+
+.new_repo svg{
+    fill: #fff;
+}
 
 
 #main #profile .right .repo {
