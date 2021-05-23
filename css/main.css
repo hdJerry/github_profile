@@ -292,7 +292,7 @@ font-weight: bold;
 }
 
 #main #profile .right {
-    margin-top:60px;
+    margin-top: 30px;
     width: 73%;
     /* height: 600px; */
     /* overflow-y: auto; */
@@ -472,6 +472,7 @@ font-weight: bold;
 .language {
 display: flex;
 align-items: center;
+margin-right: 10px;
 }
 
 .lang_color {
