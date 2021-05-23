@@ -35,6 +35,7 @@ body{
 
 .flexbox{
     display: flex;
+    align-items: center;
 }
 
 .login {
@@ -152,6 +153,7 @@ body{
     align-items:  flex-start;
     flex-flow: row wrap;
     margin-top: 40px;
+    padding: 0 40px;
 }
 
 #main #profile .left {
@@ -176,20 +178,21 @@ body{
     margin-top: 0;
 }
 #main #profile .left #pics {
-    width: 260px;
-    height: 260px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-     margin-top: -32px;
-     height: -webkit-fit-content;
-     height: -moz-fit-content;
-     height: fit-content;
-     left: 15%;
-     top: -10%;
-    /* overflow: hidden; */
+    width: 277.88px;
+    height: 277.88px;
+    border-radius: 100vh;
+    -webkit-border-radius: 100vh;
+    -moz-border-radius: 100vh;
+    -ms-border-radius: 100vh;
+    -o-border-radius: 100vh;
+    margin-top: -32px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    left: 15%;
+    top: -10%;
+    /*overflow: hidden;
+    */
 }
 
 #main #profile .left #pics .status {
@@ -262,7 +265,8 @@ body{
 
 #main #profile .left .info {
     width: 250px;
-    margin-top: 200px;
+    margin-top: 240px;
+   
 }
 
 #main #profile .left .info .name {
@@ -280,8 +284,10 @@ font-weight: bold;
 }
 
 #main #profile .left .info .bio {
-    margin-top: 10px;
-    font-size: 16px
+    /* margin-top: 10px; */
+     margin: 20px 0;
+     line-height: 1.7;
+     font-size: 113%;
 }
 
 #main #profile .right {
@@ -313,11 +319,11 @@ font-weight: bold;
 
 
 #main #profile .right .repo {
-    padding: 10px;
-    min-height: 70px;
+    padding: 24px 0;
+    /* min-height: 70px; */
     border-bottom: 1px solid #eaecef;
     justify-content: space-between;
-    align-items: flex-start;
+    /* align-items: flex-start; */
 }
 
 .repo_star_button{
@@ -336,6 +342,7 @@ font-weight: bold;
     -webkit-box-shadow: var(--shadow-small);
     box-shadow: var(--shadow-small);
     cursor: pointer;
+    align-self: center;
 }
 
 .repo_star_button svg {

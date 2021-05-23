@@ -19,22 +19,26 @@ function animateRepoHeader() {
     });
 }
 
-function initMiniModals() {
-    Array.from(gitHubDetailsNode).forEach((currentTarget) => {
-        const detailsNode = currentTarget.querySelector("details");
+Array.from(gitHubDetailsNode).forEach((currentTarget) => {
+    const detailsNode = currentTarget.querySelector("details");
 
-        currentTarget.addEventListener("blur", () => {
-            setTimeout(() => {
-                detailsNode.open = false;
-                detailsNode.style.pointerEvents = "none";
-            }, 200);
-        });
+    console.log(detailsNode);
 
-        currentTarget.addEventListener("focus", () => {
-            detailsNode.open = true;
-            detailsNode.style.pointerEvents = "unset";
-        });
+    currentTarget.addEventListener("blur", () => {
+        setTimeout(() => {
+            detailsNode.open = false;
+            detailsNode.style.pointerEvents = "none";
+        }, 200);
     });
+
+    currentTarget.addEventListener("focus", () => {
+
+        console.log(detailsNode);
+        detailsNode.open = true;
+        detailsNode.style.pointerEvents = "unset";
+    });
+});
+function initMiniModals() {
 }
 
 function initHamBurgerMenu() {
