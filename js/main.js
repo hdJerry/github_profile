@@ -1,7 +1,7 @@
 let user = sessionStorage.getItem('user');
 
-const CLIENT_ID="69ade597d283d5c5c8b9";
-const CLIENT_SECRET="752d09a70235b7c3b20b3602e9910e15223204e2";
+const CLIENT_ID = "69ade597d283d5c5c8b9";
+const CLIENT_SECRET = "752d09a70235b7c3b20b3602e9910e15223204e2";
 
 //encoded token to prevent auto removal by github.
 const GITHUB_ENCODED_TOKEN =
@@ -13,7 +13,9 @@ const GITHUB_DECODED_TOKEN = atob(GITHUB_ENCODED_TOKEN);
 
 const ProfilePage = async () => {
     let app = document.querySelector('#app');
-    let {user} = JSON.parse(sessionStorage.getItem('data'));
+    let {
+        user
+    } = JSON.parse(sessionStorage.getItem('data'));
 
 
     app.innerHTML = `
@@ -129,8 +131,25 @@ const ProfilePage = async () => {
                         </div>
                         <div class="modal_section">
                         <a href="/#" class="borederd_link flex"
-                            >${user.status.emojiHTML}<span class="text"
-                            >${user.status.message}</span
+                            >${user.status 
+                                ? user.status.emojiHTML 
+                                : `<svg 
+                                class="octicon octicon-smiley" 
+                                viewBox="0 0 16 16" 
+                                version="1.1" 
+                                width="16" 
+                                height="16" 
+                                aria-hidden="true">
+                                <path 
+                                fill-rule="evenodd" 
+                                d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371.13-.088.247-.192.35-.31l.007-.008a.75.75 0 111.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.984 1.984 0 01-.184.213c-.16.166-.338.316-.53.445-.63.418-1.37.638-2.127.629-.946 0-1.652-.308-2.126-.63a3.32 3.32 0 01-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044h.001z"
+                                >
+                                </path>
+                                </svg>
+                                `
+                                }
+                                <span class="text"
+                            >${user.status ? user.status.message : 'Set Status'}</span
                             ></a
                         >
                         </div>
@@ -167,7 +186,24 @@ const ProfilePage = async () => {
                                 <span class="emoji_text">${user.status.message}</span>
                                 ` 
                                 : 
-                                ''}
+                                `<span class="emoji">
+                                    <svg 
+                                    class="octicon octicon-smiley" 
+                                    viewBox="0 0 16 16" 
+                                    version="1.1" 
+                                    width="16" 
+                                    height="16" 
+                                    aria-hidden="true">
+                                    <path 
+                                    fill-rule="evenodd" 
+                                    d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371.13-.088.247-.192.35-.31l.007-.008a.75.75 0 111.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.984 1.984 0 01-.184.213c-.16.166-.338.316-.53.445-.63.418-1.37.638-2.127.629-.946 0-1.652-.308-2.126-.63a3.32 3.32 0 01-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044h.001z"
+                                    >
+                                    </path>
+                                    </svg>
+                                </span>
+                                <span class="emoji_text">Set Status</span>
+                                `
+                                }
                         </div>
                     </div>
                     <div class="info">
@@ -255,6 +291,10 @@ const ProfilePage = async () => {
                             ></path>
                             </svg>`,
                             })}
+
+                            <p>
+                                 Updated on ${formatDate(res.updatedAt)}
+                            </p>
                     </div>
                 </div>
 
@@ -286,8 +326,8 @@ const ProfilePage = async () => {
 
 const getProfile = (user) => {
 
-    
-        
+
+
     let auth = {
         "Authorization": `token ${GITHUB_DECODED_TOKEN}`
     }
@@ -354,7 +394,7 @@ const getProfile = (user) => {
         .then((result) => {
             console.log(result);
 
-            if(result.data && result.data.user) {
+            if (result.data && result.data.user) {
 
                 sessionStorage.setItem('user', result.data.user.login);
                 sessionStorage.setItem('data', JSON.stringify(result.data))
@@ -372,7 +412,7 @@ const getProfile = (user) => {
 
 
 
-function LoginPage () {
+function LoginPage() {
     let app = document.querySelector('#app');
 
     app.innerHTML = `
@@ -394,7 +434,7 @@ function LoginPage () {
         if (user && user.trim().length > 0) {
             getProfile(user);
             submit.innerText = "Processing...";
-            submit.disabled="disabled"
+            submit.disabled = "disabled"
 
         } else {
             alert('Invalid Username')
@@ -437,11 +477,11 @@ function RepoOtherDetails({
 }
 
 (async function () {
-if (user) {
+    if (user) {
 
-    await getProfile(user)
-    ProfilePage()
-} else {
-    LoginPage();
-}
+        await getProfile(user)
+        ProfilePage()
+    } else {
+        LoginPage();
+    }
 })();
