@@ -162,7 +162,7 @@ const ProfilePage = async () => {
                         </div>
                         <div class="modal_section">
                         <a href="/#">Feature preview</a><a href="/#">Help</a
-                        ><a href="/#">Settings</a><a href="/#">Sign out</a>
+                        ><a href="/#">Settings</a><a href="/#" onclick="signOut()">Sign out</a>
                         </div>
                     </div>
                     </details>
@@ -570,6 +570,11 @@ function searchFunctions (label) {
     ` : "";
 }
 
+
+function signOut() {
+    sessionStorage.clear();
+    LoginPage();
+}
 
 (async function () {
     if (user) {

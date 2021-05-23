@@ -19,26 +19,6 @@ function animateRepoHeader() {
     });
 }
 
-Array.from(gitHubDetailsNode).forEach((currentTarget) => {
-    const detailsNode = currentTarget.querySelector("details");
-    console.log();
-    currentTarget.addEventListener("blur", () => {
-
-
-        setTimeout(() => {
-            detailsNode.open = false;
-            detailsNode.style.pointerEvents = "none";
-        }, 200);
-    });
-
-    currentTarget.addEventListener("focus", () => {
-
-        console.log(detailsNode);
-        detailsNode.open = true;
-        detailsNode.style.pointerEvents = "unset";
-    });
-});
-
 function initHamBurgerMenu() {
     const hamBurgerButton = gitHubDOM.getNode(".js_hamburger_btn");
     const mobileLinks = gitHubDOM.getNode(".mbl_links_container");
@@ -69,7 +49,7 @@ const fetchAndMapReposAction = async () => {
 // fetchAndMapReposAction();
 
 setTimeout(() => {
-    // initMiniModals();
     initHamBurgerMenu();
     
 }, 3000);
+
