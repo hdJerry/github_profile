@@ -305,6 +305,7 @@ font-weight: bold;
 #main #profile .right {
     /* margin-top: 30px; */
     width: 73%;
+    padding-right: 30px;
     /* height: 600px; */
     /* overflow-y: auto; */
     /* background-color: #7263ca; */
@@ -318,6 +319,7 @@ font-weight: bold;
 
     #main #profile .right {
         margin-top: 0;
+        padding-right: unset;
     }
 
 }
