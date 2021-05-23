@@ -460,3 +460,47 @@ font-weight: bold;
 .pr-4{
     padding-right: 24px!important;
 }
+
+.language {
+display: flex;
+align-items: center;
+}
+
+.lang_color {
+    width: 10px;
+    height: 10px;
+    border-radius: 100vh;
+    -webkit-border-radius: 100vh;
+    -moz-border-radius: 100vh;
+    -ms-border-radius: 100vh;
+    -o-border-radius: 100vh;
+    margin-right: 6px;
+}
+
+
+.repo .repo_footer .action_button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 18px;
+    -webkit-transition: 0.1s ease-out;
+    transition: 0.1s ease-out;
+    cursor: pointer;
+}
+
+.repo .repo_footer .action_button:hover,
+.repo .repo_footer .action_button:hover * {
+    color: #0366d6;
+}
+
+.repo .repo_footer .action_button svg {
+    width: 16px;
+    margin: 0 5px;
+}
+
+.repo .repo_footer .action_button path {
+    fill: currentColor;
+}
