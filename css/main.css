@@ -10,6 +10,7 @@
     --secondary-color: #7263ca;
     --tertiary-color: #161b22;
     --color-text-primary: #24292e;
+    --color-text-seconday: #586069;
     --color-border: #eaecef;
     --shadow-small: 0 1px 0 rgba(27, 31, 35, 0.04);
     --font-family: -apple-system,
@@ -411,18 +412,6 @@ font-weight: bold;
 }
 
 
- details {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    position: relative;
-}
-
- details a:not(.borederd_link):hover,
- details button:not(.borederd_link):hover {
-    background: royalblue;
-    color: #fff !important;
-}
 
 .github_details details {
     pointer-events: none;
@@ -435,4 +424,39 @@ font-weight: bold;
     border-radius: 100vh;
     background: #fff;
     border: 1px solid var(--color-border);
+}
+
+.repo_name {
+    font-weight: 600;
+    color: #0366d6;
+    font-size: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.repo_desc {
+    color: var(--color-text-seconday);
+}
+
+.private_tag {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    font-weight: 500;
+    color: #586069;
+    font-size: 12px;
+    padding: 1px 7px;
+    border-radius: 100vh;
+    margin-left: 10px;
+}
+
+.mb-2{
+    margin-bottom: 8px!important;
+}
+
+.pr-4{
+    padding-right: 24px!important;
 }

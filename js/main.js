@@ -129,8 +129,8 @@ const ProfilePage = async () => {
                         </div>
                         <div class="modal_section">
                         <a href="/#" class="borederd_link flex"
-                            >🤚<span class="text"
-                            >${user.bio}</span
+                            >${user.status.emojiHTML}<span class="text"
+                            >${user.status.message}</span
                             ></a
                         >
                         </div>
@@ -195,13 +195,13 @@ const ProfilePage = async () => {
         div.innerHTML = `
                 <div class="_left">
                     <p class="flexbox">
-                        <a href="${res.url}">
+                        <a class="repo_name" href="${res.url}">
                             ${res.name}
                         </a>
 
                         ${res.isPrivate ? `<span class="private_tag">Private</span>`  : ''}
                     </p>
-                    <p>${res.description ? res.description : ''}</p>
+                    <p class="repo_desc mb-2 pr-4">${res.description ? res.description : ''}</p>
                 </div>
 
                 <div class="_right">

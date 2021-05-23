@@ -64,6 +64,10 @@ const fetchAndMapReposAction = async () => {
     // animateRepoHeader();
 };
 
-fetchAndMapReposAction();
-initMiniModals();
-initHamBurgerMenu();
+// fetchAndMapReposAction();
+
+setTimeout(() => {
+    initMiniModals();
+    initHamBurgerMenu();
+    
+}, 3000);
