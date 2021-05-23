@@ -157,7 +157,7 @@ body{
 }
 
 #main #profile .left {
-    width: 30%;
+    width: 23%;
     height: 400px;
     /* background-color: #fff; */
     display: flex;
@@ -189,7 +189,7 @@ body{
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    left: 15%;
+    left: 10%;
     top: -10%;
     /*overflow: hidden;
     */
@@ -265,7 +265,8 @@ body{
 
 #main #profile .left .info {
     width: 250px;
-    margin-top: 240px;
+    margin-top: 225px;
+    margin-left: 15px;
    
 }
 
@@ -280,19 +281,19 @@ font-weight: bold;
    font-style: normal;
    font-weight: 300;
    line-height: 24px;
-   color:#8b949e;
+   color: var(--color-text-seconday);
 }
 
 #main #profile .left .info .bio {
     /* margin-top: 10px; */
-     margin: 20px 0;
+     margin: 15px 0;
      line-height: 1.7;
      font-size: 113%;
 }
 
 #main #profile .right {
     margin-top:60px;
-    width: 70%;
+    width: 73%;
     /* height: 600px; */
     /* overflow-y: auto; */
     /* background-color: #7263ca; */
