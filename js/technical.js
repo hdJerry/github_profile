@@ -21,10 +21,10 @@ function animateRepoHeader() {
 
 Array.from(gitHubDetailsNode).forEach((currentTarget) => {
     const detailsNode = currentTarget.querySelector("details");
-
-    console.log(detailsNode);
-
+    console.log();
     currentTarget.addEventListener("blur", () => {
+
+
         setTimeout(() => {
             detailsNode.open = false;
             detailsNode.style.pointerEvents = "none";
@@ -38,8 +38,6 @@ Array.from(gitHubDetailsNode).forEach((currentTarget) => {
         detailsNode.style.pointerEvents = "unset";
     });
 });
-function initMiniModals() {
-}
 
 function initHamBurgerMenu() {
     const hamBurgerButton = gitHubDOM.getNode(".js_hamburger_btn");
@@ -71,7 +69,7 @@ const fetchAndMapReposAction = async () => {
 // fetchAndMapReposAction();
 
 setTimeout(() => {
-    initMiniModals();
+    // initMiniModals();
     initHamBurgerMenu();
     
 }, 3000);

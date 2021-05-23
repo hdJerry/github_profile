@@ -221,9 +221,77 @@ const ProfilePage = async () => {
                         </form>
                     </div>
                     
-                    ${searchFunctions('Type')}
-                    ${searchFunctions('Language')}
-                    ${searchFunctions('Sort')}
+                    ${ 
+                        `
+                         <div tabindex="0" class="github_details">
+                         <details tabindex="-2">
+                            ${searchFunctions('Type')}
+                            <div class="dropdown search_dropdown">
+                                <div class="flexbox close_container">
+                                <strong>Select type</strong>
+                                <button class="SelectMenu-closeButton" type="button" data-toggle-for="type-options"><svg aria-label="Close menu" aria-hidden="false" role="img" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-x">
+                                    <path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path>
+                                </svg>
+                                </button>
+                                </div>
+                                <a href="/#">All</a>
+                                <a href="/#">Public</a>
+                                <a href="/#">Private</a>
+                                <a href="/#">Sources</a>
+                                <a href="/#">Forks</a>
+                                <a href="/#">Archived</a>
+                                <a href="/#">Mirrors</a>
+                            </div>
+                         
+                         </details>
+                        </div>
+                    `}
+                    ${
+                        `<div tabindex="0" class="github_details">
+                         <details tabindex="-3">
+                            ${searchFunctions('Language')}
+                            <div class="dropdown search_dropdown">
+                                <div class="flexbox close_container">
+                                <strong>Select type</strong>
+                                <button class="SelectMenu-closeButton" type="button" data-toggle-for="type-options"><svg aria-label="Close menu" aria-hidden="false" role="img" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-x">
+                                    <path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path>
+                                </svg>
+                                </button>
+                                </div>
+                                <a href="/#">All</a>
+                                <a href="/#">Js</a>
+                                <a href="/#">Vue</a>
+                                <a href="/#">CSS</a>
+                                <a href="/#">HTML</a>
+                                <a href="/#">PHP</a>
+                                <a href="/#">Object-C</a>
+                                <a href="/#">Ruby</a>
+                            </div>
+                         
+                         </details>
+                        </div>`
+                    }
+                    ${
+                        `
+                        <div tabindex="0" class="github_details">
+                         <details tabindex="-4">
+                            ${searchFunctions('Sort')}
+                            <div class="dropdown search_dropdown">
+                                <div class="flexbox close_container">
+                                <strong>Select type</strong>
+                                <button class="SelectMenu-closeButton" type="button" data-toggle-for="type-options"><svg aria-label="Close menu" aria-hidden="false" role="img" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-x">
+                                    <path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path>
+                                </svg>
+                                </button>
+                                </div>
+                                <a href="/#">Last Updated</a>
+                                <a href="/#">Stars</a>
+                            </div>
+                         
+                         </details>
+                        </div>
+                        `
+                    }
                 </div>
 
                 <div id="repo_main">
@@ -495,12 +563,13 @@ function RepoOtherDetails({
 function searchFunctions (label) {
     return label.trim().length > 0 ? 
     `
-        <button class="flexbox repo_star_button search_by_${label}">
+        <summary class="flexbox repo_star_button search_by_${label}">
             <span>${label}</span>
             <span class="drop_own_caret_dack"></span>
-        </button>
+        </summary>
     ` : "";
 }
+
 
 (async function () {
     if (user) {

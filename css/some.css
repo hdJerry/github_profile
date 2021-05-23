@@ -30,6 +30,11 @@ details summary::-webkit-details-marker {
     display: none;
 }
 
+details button::-webkit-details-marker {
+    display: none;
+}
+
+
 
 .mbl {
     display: none;
@@ -326,7 +331,7 @@ details summary::-webkit-details-marker {
     opacity: 0.7;
 }
 
-.app_header details {
+.app_header details, #profile details {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -334,10 +339,15 @@ details summary::-webkit-details-marker {
 }
 
 .app_header details a:not(.borederd_link):hover,
-.app_header details button:not(.borederd_link):hover {
+.app_header details button:not(.borederd_link):hover,
+ #profile details a:not(.borederd_link):hover,
+  #profile details button:not(.borederd_link):hover
+{
     background: royalblue;
-    color: #fff !important;
+    color: #fff!important;
 }
+
+
 
 .app_header * {
     color: #fff;

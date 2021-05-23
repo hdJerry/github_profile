@@ -335,7 +335,7 @@ font-weight: bold;
     justify-content: space-between;
 }
 
-.repo_search_header button {
+.repo_search_header summary {
     margin-right: 5px;
 }
 
@@ -358,6 +358,33 @@ font-weight: bold;
      border: 1px solid #0366d6;
      -webkit-box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.3);
      box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.3);
+}
+
+
+.search_dropdown {
+    width: 300px;
+    height: auto;
+    max-height: 480px;
+    margin: 20px 0 16px;
+    font-size: 12px;
+    border-color: var(--color-border);
+    border-radius: 6px;
+    box-shadow: var(--shadow-small);
+}
+
+.search_dropdown a{
+    border-top: 1px solid var(--color-border);
+    display: block;
+}
+
+.search_dropdown a:hover a{
+    background: #fff!important;
+    color: var(--color-text-primary)!important;
+}
+
+.close_container{
+    justify-content: space-between;
+    padding: 2px 10px;
 }
 
 
@@ -473,7 +500,7 @@ font-weight: bold;
 }
 
 .dropdown * {
-    color: #24292e;
+    color: #24292e!important;
 }
 
 .dropdown a,
@@ -484,10 +511,6 @@ font-weight: bold;
 }
 
 
-
-.github_details details {
-    pointer-events: none;
-}
 
 
 .profile_picture {
