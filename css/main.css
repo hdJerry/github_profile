@@ -284,6 +284,17 @@ font-weight: bold;
    color: var(--color-text-seconday);
 }
 
+.drop_own_caret_dack {
+    height: 5px;
+    width: 10px;
+    display: inline-block;
+    background: var(--color-text-seconday);
+    margin: 0 4px;
+    -webkit-clip-path: polygon(100% 0, 0 0, 50% 100%);
+    clip-path: polygon(100% 0, 0 0, 50% 100%);
+}
+
+
 #main #profile .left .info .bio {
     /* margin-top: 10px; */
      margin: 15px 0;
@@ -321,6 +332,16 @@ font-weight: bold;
 .repo_search_header {
     padding: 16px 0;
     border-bottom: 1px solid var(--color-border);
+    justify-content: space-between;
+}
+
+.repo_search_header button {
+    margin-right: 5px;
+}
+
+.search_container {
+    width: 100%;
+    margin-right: 20px;
 }
 .search_container input{
     padding: 6px 12px;
@@ -330,6 +351,34 @@ font-weight: bold;
     background: #fff;
     -webkit-transition: 0.1s ease-out;
     transition: 0.1s ease-out;
+}
+
+
+.search_container input:focus {
+     border: 1px solid #0366d6;
+     -webkit-box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.3);
+     box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.3);
+}
+
+
+.search_container input::-webkit-input-placeholder {
+    color: #6a737d;
+    font-family: inherit;
+}
+
+.search_container input:-ms-input-placeholder {
+    color: #6a737d;
+    font-family: inherit;
+}
+
+.search_container input::-ms-input-placeholder {
+    color: #6a737d;
+    font-family: inherit;
+}
+
+.search_container input::placeholder {
+    color: #6a737d;
+    font-family: inherit;
 }
 
 

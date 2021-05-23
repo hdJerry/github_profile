@@ -214,12 +214,16 @@ const ProfilePage = async () => {
                 </div>
                 <div class="right" id="repos">
 
-                <div class="repo_search_header">
+                <div class="flexbox repo_search_header">
                     <div class="search_container">
                         <form>
                             <input placeholder="Find a repository..." />
                         </form>
                     </div>
+                    
+                    ${searchFunctions('Type')}
+                    ${searchFunctions('Language')}
+                    ${searchFunctions('Sort')}
                 </div>
 
                 <div id="repo_main">
@@ -486,6 +490,16 @@ function RepoOtherDetails({
   </button>
   ` :
         "";
+}
+
+function searchFunctions (label) {
+    return label.trim().length > 0 ? 
+    `
+        <button class="flexbox repo_star_button search_by_${label}">
+            <span>${label}</span>
+            <span class="drop_own_caret_dack"></span>
+        </button>
+    ` : "";
 }
 
 (async function () {
