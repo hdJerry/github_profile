@@ -213,6 +213,18 @@ const ProfilePage = async () => {
                     </div>
                 </div>
                 <div class="right" id="repos">
+
+                <div class="repo_search_header">
+                    <div class="search_container">
+                        <form>
+                            <input placeholder="Find a repository..." />
+                        </form>
+                    </div>
+                </div>
+
+                <div id="repo_main">
+                
+                </div>
                     
                 </div>
             </div>
@@ -224,7 +236,7 @@ const ProfilePage = async () => {
     `;
 
 
-    let repo_container = document.querySelector('#repos');
+    let repo_container = document.querySelector('#repo_main');
     user.repositories.nodes.forEach((res) => {
 
         let div = document.createElement('div');
