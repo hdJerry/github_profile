@@ -30,12 +30,8 @@ body{
     line-height: 1.5;
     color: var(--color-text-primary);
     overflow-x: hidden;
-    
 
 }
-html, body{
-}
-
 
 .flexbox{
     display: flex;
@@ -830,7 +826,7 @@ margin-right: 10px;
     }
 
     #main #profile {
-        padding: 0 10px;
+        padding: 0 30px;
     }
 
     .repo_search_header {
