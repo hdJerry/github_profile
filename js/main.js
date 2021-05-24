@@ -60,14 +60,28 @@ const ProfilePage = async () => {
                 </svg>
 
                 <div class="flex mbl_links_container">
-                    <div class="header_search_wrapper">
-                        <input type="text" placeholder="Search or jump to..." />
-                        <img
-                        src="https://github.githubassets.com/images/search-key-slash.svg"
-                        alt=""
-                        srcset=""
-                        class="header_search_wrapper_slash-icon"
-                        />
+                <div class="github_details">
+                    <details tabindex="-5" id="searchOpt">
+                        <summary>
+                            <div class="header_search_wrapper">
+                            <input onfocus="openSearchOptToggle()" onblur="openSearchOptToggle()" type="text" placeholder="Search or jump to..." />
+                            <img
+                            src="https://github.githubassets.com/images/search-key-slash.svg"
+                            alt=""
+                            srcset=""
+                            class="header_search_wrapper_slash-icon"
+                            />
+                            </div>
+                        </summary>
+
+                        <div class="dropdown nav_search_dropdown">
+                            <a href="/#">New stuff</a
+                            ><a href="/#">Something here</a><a href="/#">New gist</a
+                            ><a href="/#">SEarch results</a
+                            ><a href="/#">Open issues</a>
+                        </div>
+                        
+                    </details>
                     </div>
                     <div class="app_header_links">
                         <a href="/#">Pull requests</a><a href="/#">Issues</a
@@ -694,16 +708,25 @@ function initHamBurgerMenu() {
     });
 }
 
+function openSearchOptToggle() {
+    const searchOpt = gitHubDOM.getNode("#searchOpt");
+    if (searchOpt.open) {
+        searchOpt.open =  false;
+    } else {
+        searchOpt.open = true
+        closeAll(searchOpt);
+    }
+}
 
 
-function closeAll(){
+
+function closeAll(value=null){
     let Details = document.querySelectorAll('details');
-    console.log('here');
-    console.log(Details);
     Details.forEach((detail) => {
-        console.log(detail);
-        console.log(detail.open);
-        detail.open  = false;
+        if(value !== detail) {
+            detail.open  = false;
+
+        }
     })
 }
 

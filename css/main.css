@@ -400,7 +400,14 @@ font-weight: bold;
     border-color: var(--color-border);
     border-radius: 6px;
     box-shadow: var(--shadow-small);
+    transform: translateY(calc(100% + 20px));
+    -webkit-transform: translateY(calc(100% + 20px));
+    -moz-transform: translateY(calc(100% + 20px));
+    -ms-transform: translateY(calc(100% + 20px));
+    -o-transform: translateY(calc(100% + 20px));
 }
+
+
 
 .search_dropdown p{
     border-top: 1px solid var(--color-border);
@@ -576,6 +583,29 @@ font-weight: bold;
 }
 
 
+.search_dropdown {
+    width: 300px;
+    height: auto;
+    max-height: 480px;
+    margin: 20px 0 16px;
+    font-size: 12px;
+    border-color: var(--color-border);
+    border-radius: 6px;
+    box-shadow: var(--shadow-small);
+    transform: translateY(calc(100% + 20px));
+    -webkit-transform: translateY(calc(100% + 20px));
+    -moz-transform: translateY(calc(100% + 20px));
+    -ms-transform: translateY(calc(100% + 20px));
+    -o-transform: translateY(calc(100% + 20px));
+}
+.nav_search_dropdown {
+    width: 100%;
+    transform: translateY(calc(100% + 1px));
+    -webkit-transform: translateY(calc(100% + 1px));
+    -moz-transform: translateY(calc(100% + 1px));
+    -ms-transform: translateY(calc(100% + 1px));
+    -o-transform: translateY(calc(100% + 1px));
+}
 
 
 .profile_picture {
