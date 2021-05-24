@@ -370,11 +370,12 @@ font-weight: bold;
     padding: 10px;
     color: var(--color-text-seconday);
     border-bottom:2px solid transparent;
-    margin-right: 15px;
+    margin-right: 10px;
 }
-.tabs_header .right .tab>svg,
+.tabs_header .right .tab svg,
 .tab_mb svg {
     margin-right: 10px;
+    fill: var(--color-text-seconday);
 }
 
 .tabs_header .right .tab .num,
@@ -390,6 +391,11 @@ font-weight: bold;
 .tab_mb .tab.active {
     font-weight: 600;
     border-color: #f9826c;
+    color: black;
+}
+
+.tabs_header .right .tab.active svg {
+    fill: black;
 }
 
 .tabs_header .right .tab:not(.active):hover,
