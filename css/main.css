@@ -359,11 +359,11 @@ font-weight: bold;
 
 .tabs_header .right, .tab_mb {
     justify-content: space-evenly;
-    transform: translateX(-50px);
-    -webkit-transform: translateX(-50px);
-    -moz-transform: translateX(-50px);
-    -ms-transform: translateX(-50px);
-    -o-transform: translateX(-50px);
+    transform: translateX(-30px);
+    -webkit-transform: translateX(-30px);
+    -moz-transform: translateX(-30px);
+    -ms-transform: translateX(-30px);
+    -o-transform: translateX(-30px);
 }
 
 .tabs_header .right .tab, .tab_mb .tab{
@@ -807,6 +807,11 @@ margin-right: 10px;
 
 .tab_mb{
     display:none;
+    transform: unset;
+    -webkit-transform: unset;
+    -moz-transform: unset;
+    -ms-transform: unset;
+    -o-transform: unset;
 }
 
 
@@ -815,18 +820,16 @@ margin-right: 10px;
 
 @media (max-width: 767px) {
 
-    .tab_mb {
-        display: flex;
-        margin: unset;
-    }
-
+        #main {
+            overflow-x: hidden;
+        }
     #main #profile .left,
     #main #profile .right {
         width: 100%;
     }
 
     #main #profile {
-        padding: 0 30px;
+        padding: 0 20px;
     }
 
     .repo_search_header {
@@ -917,6 +920,7 @@ margin-right: 10px;
         display: none!important;
     }
      .tab_mb {
+         display: flex;
          width: 100%;
          overflow: auto;
          transform:unset;
@@ -927,7 +931,7 @@ margin-right: 10px;
       }
 
       .tab_mb .tab {
-          margin-right: 5px;
+          margin-right: unset;
       }
     .tab_mb svg {
         display:none;
