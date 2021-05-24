@@ -573,7 +573,7 @@ const getProfile = (user) => {
                 followers {
                     totalCount
                 }
-                repositories(first: 20, isFork: false) {
+                repositories(last: 20) {
                     nodes {
                         name
                         description

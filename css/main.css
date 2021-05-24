@@ -158,7 +158,7 @@ body{
 
 #main #profile .left {
     width: 23%;
-    height: 400px;
+    /* height: 400px; */
     /* background-color: #fff; */
     display: flex;
     justify-content: flex-start;
@@ -271,13 +271,13 @@ body{
 
 #main #profile .left .info {
     width: 250px;
-    margin-top: 340px;
+    margin-top: 330px;
     margin-left: 15px;
    
 }
 
 .name_login {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 #main #profile .left .name {
@@ -370,7 +370,7 @@ font-weight: bold;
     padding: 10px;
     color: var(--color-text-seconday);
     border-bottom:2px solid transparent;
-    margin-right: 10px;
+    margin-right: 4px;
 }
 .tabs_header .right .tab svg,
 .tab_mb svg {
@@ -856,12 +856,16 @@ margin-right: 10px;
     .repo_search_header .new_repo{
         width: 100%;
         justify-content: center;
-        transform: translateY(-120px);
-        -webkit-transform: translateY(-120px);
-        -moz-transform: translateY(-120px);
-        -ms-transform: translateY(-120px);
-        -o-transform: translateY(-120px);
+        transform: translateY(-130px);
+        -webkit-transform: translateY(-130px);
+        -moz-transform: translateY(-130px);
+        -ms-transform: translateY(-130px);
+        -o-transform: translateY(-130px);
         margin-left: unset;
+}
+
+.repo_search_header .search_container{
+    margin: 20px 0;
 }
 
     .search_container {
@@ -870,7 +874,7 @@ margin-right: 10px;
     }
 
     #main #profile .right {
-        margin-top: -50px;
+        margin-top: 50px;
         padding-right: unset;
     }
 
