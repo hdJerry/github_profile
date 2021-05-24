@@ -176,6 +176,7 @@ body{
     left: 85%;
     margin-bottom: 39px;
     margin-top: 0;
+    z-index: 2;
 }
 #main #profile .left #pics {
     width: 277.88px;
@@ -327,12 +328,35 @@ font-weight: bold;
     }
 
 }
-
-.hr {
+.hide {
+    display: none;
+}
+.tabs_header {
     width: 100%;
-    height: 1px;
-    background-color: #eaecef;
-    margin-top: 80px;
+    border-bottom: 1px solid #eaecef;
+    margin-top: 10px;
+    justify-content: center;
+    height: 70px;
+     border-bottom: 1px solid var(--color-border);
+     padding-top: 0;
+     padding-bottom: 0;
+     position: -webkit-sticky;
+     position: sticky;
+     top: 0;
+     z-index: 1;
+     background-color: #fff;
+     align-items: flex-end;
+}
+
+.tabs_header .left{
+    position: absolute;
+    left: 40px;
+    bottom: 10px;
+}
+
+.tabs_header .left .profile_picture{
+    width: 40px;
+    height: 40px;
 }
 
 .repo_search_header {
@@ -641,3 +665,65 @@ margin-right: 10px;
 .repo .repo_footer .action_button path {
     fill: currentColor;
 }
+
+
+
+.app_page_loader {
+    min-height: calc(100vh - 90px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.app_page_loader.hide {
+    display: none;
+}
+
+.app_page_loader svg {
+    height: 100px;
+    height: 100px;
+    -webkit-animation-name: breathe;
+    animation-name: breathe;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.app_page_loader svg path {
+    fill: #24292e;
+}
+
+
+.repo_app_header-user {
+    -webkit-transition: 0.2s ease-out;
+    transition: 0.2s ease-out;
+}
+
+.repo_app_header-user.hide {
+    opacity: 0;
+}
+
+@media (max-width: 863px) {
+    .repo_app_header-user {
+        display: none;
+    }
+}
+
+.repo_app_header-user .user_profile_picture {
+    height: 33px;
+    height: 33px;
+    border-radius: 100vh;
+}
+
+.repo_app_header-user .name {
+    margin: 0 10px;
+    font-weight: 600;
+}
+
