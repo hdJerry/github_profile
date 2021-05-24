@@ -169,10 +169,10 @@ body{
 
 
 
-#main #profile .left #pics,
+#main #profile .left .pics_name,
 #main #profile .left #pics .status {
     position: absolute;
-    top: 65%;
+    top: 45%;
     left: 85%;
     margin-bottom: 39px;
     margin-top: 0;
@@ -190,10 +190,15 @@ body{
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    left: 10%;
-    top: 0;
     /*overflow: hidden;
     */
+}
+
+#main #profile .left .pics_name{
+    left: 10%;
+    top: 0;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 #main #profile .left #pics .status {
@@ -266,22 +271,28 @@ body{
 
 #main #profile .left .info {
     width: 250px;
-    margin-top: 265px;
+    margin-top: 340px;
     margin-left: 15px;
    
 }
 
-#main #profile .left .info .name {
+.name_login {
+    margin-top: 20px;
+}
+
+#main #profile .left .name {
 font-size: 26px;
 line-height: 1.25;
 font-weight: bold;
+/* margin-top: 15px; */
 }
 
-#main #profile .left .info .username {
+#main #profile .left .username {
    font-size: 20px;
    font-style: normal;
    font-weight: 300;
    line-height: 24px;
+   /* margin-top: 30px; */
    color: var(--color-text-seconday);
 }
 
@@ -304,42 +315,17 @@ font-weight: bold;
 }
 
 #main #profile .right {
-    /* margin-top: 30px; */
     width: 73%;
     padding-right: 30px;
-    /* height: 600px; */
-    /* overflow-y: auto; */
-    /* background-color: #7263ca; */
 }
 
 .github_details details {
     pointer-events: visible;
 }
 
-@media (max-width: 500px) {
-    #main #profile .left,
-    #main #profile .right {
-        width: 100%;    
-    }
 
-    #main #profile{
-        padding: 0 10px;
-    }
 
-.repo_search_header {
-    flex-flow: row wrap;
-}
-    .search_container{
-        margin-right: unset!important;
-        margin-bottom: 10px;
-    }
 
-    #main #profile .right {
-        margin-top: 0;
-        padding-right: unset;
-    }
-
-}
 .hide {
     display: none;
 }
@@ -369,6 +355,28 @@ font-weight: bold;
 .tabs_header .left .profile_picture{
     width: 40px;
     height: 40px;
+}
+
+.tabs_header .right {
+    justify-content: space-evenly;
+}
+
+.tabs_header .right .tab{
+    padding: 10px;
+    color: var(--color-text-seconday);
+    border-bottom:2px solid transparent;
+    margin-right: 15px;
+}
+.tabs_header .right .tab > svg  {
+    margin-right: 10px;
+}
+.tabs_header .right .tab.active {
+    font-weight: 600;
+    border-color: #f9826c;
+}
+
+.tabs_header .right .tab:not(.active):hover{
+    border-color: #d1d5da;
 }
 
 .repo_search_header {
@@ -770,3 +778,123 @@ margin-right: 10px;
     font-weight: 600;
 }
 
+
+/* desktop */
+
+@media (min-width: 767px) {
+
+
+
+}
+
+
+
+
+
+@media (max-width: 767px) {
+
+    #main #profile .left,
+    #main #profile .right {
+        width: 100%;
+    }
+
+    #main #profile {
+        padding: 0 10px;
+    }
+
+    .repo_search_header {
+        flex-flow: row wrap;
+        justify-content: unset;
+    }
+
+    .repo_search_header .new_repo{
+        width: 100%;
+        justify-content: center;
+        transform: translateY(-120px);
+        -webkit-transform: translateY(-120px);
+        -moz-transform: translateY(-120px);
+        -ms-transform: translateY(-120px);
+        -o-transform: translateY(-120px);
+        margin-left: unset;
+}
+
+    .search_container {
+        margin-right: unset !important;
+        margin-bottom: 10px;
+    }
+
+    #main #profile .right {
+        margin-top: 10px;
+        padding-right: unset;
+    }
+
+    #main #profile .left {
+        align-items: flex-start;
+    }
+
+    #main #profile .left #pics {
+        width: 100px;
+        height: 100px;
+        position: unset;
+        margin-right: 20px;
+    }
+
+    #main #profile .left #pics .status {
+        max-width: unset;
+        left: 30%;
+        top: 50px;
+    }
+
+    #main #profile .left #pics .status .emoji_text {
+        margin-right: 18px;
+        opacity: 1;
+    }
+
+    #main #profile .left .pics_name {
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        left: unset;
+        top: unset;
+        width: 100%;
+        /* margin-left: 30px; */
+        /* left: 10px; */
+    }
+
+    #main #profile .left .info {
+        margin-top: 30px;
+    }
+
+    #main #profile .left .name {
+        font-size: 20px;
+    }
+
+    #main #profile .left .username {
+        font-size: 15px;
+    }
+
+    .name_login {
+        margin-top: -30px;
+    }
+
+    .tabs_header {
+        position: relative;
+        margin-top: unset;
+        transform: translateY(300px);
+        -webkit-transform: translateY(300px);
+        -moz-transform: translateY(300px);
+        -ms-transform: translateY(300px);
+        -o-transform: translateY(300px);
+}
+    .tabs_header .left {
+        display: none!important;
+    }
+     .tabs_header .right{
+         width: 100%;
+         overflow: auto;
+     }
+     .tabs_header .right svg{
+         display:none;
+     }
+}
