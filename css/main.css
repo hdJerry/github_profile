@@ -673,6 +673,10 @@ font-weight: bold;
     margin: 10px 0;
 }
 
+.repo .repo_footer{
+    flex-flow: row wrap;
+}
+
 .repo_desc, .repo_footer {
     color: var(--color-text-seconday);
 }
@@ -904,6 +908,8 @@ margin-right: 10px;
 
     #main #profile .left .info {
         margin-top: 50px;
+        width: unset;
+        margin-left: unset;
     }
 
     #main #profile .left .name {
