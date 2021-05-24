@@ -666,8 +666,14 @@ font-weight: bold;
     -ms-flex-align: center;
     align-items: center;
 }
-
+.repo_name:hover{
+    text-decoration: underline;
+}
 .repo_desc {
+    margin: 10px 0;
+}
+
+.repo_desc, .repo_footer {
     color: var(--color-text-seconday);
 }
 
