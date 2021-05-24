@@ -322,6 +322,16 @@ font-weight: bold;
         width: 100%;    
     }
 
+    #main #profile{
+        padding: 0 10px;
+    }
+
+
+    .search_container{
+        margin-right: unset!important;
+        margin-bottom: 10px;
+    }
+
     #main #profile .right {
         margin-top: 0;
         padding-right: unset;
@@ -363,6 +373,7 @@ font-weight: bold;
     padding: 16px 0;
     border-bottom: 1px solid var(--color-border);
     justify-content: space-between;
+    flex-flow: row wrap;
 }
 
 .repo_search_header summary {
