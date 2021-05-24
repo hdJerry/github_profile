@@ -705,12 +705,15 @@ function dropdownFunction() {
 
 function animateRepoHeader() {
     const headerUserNode = gitHubDOM.getNode(".tabs_header .left");
+    let name_login = gitHubDOM.getNode('.name_login');
 
     window.addEventListener("scroll", (e) => {
         if (window.scrollY >= 370) {
             headerUserNode.classList.remove("hide");
+            name_login.style.display = "none"
         } else {
             headerUserNode.classList.add("hide");
+            name_login.style.display = "block"
         }
     });
 }
