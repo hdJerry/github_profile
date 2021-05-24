@@ -6,6 +6,8 @@ const gitHubDOM = {
 };
 
 const gitHubDetailsNode = gitHubDOM.getAllNode(".github_details");
+const SelectMenu_closeButton = gitHubDOM.getAllNode('.SelectMenu-closeButton');
+const details = gitHubDOM.getAllNode('details');
 
 function animateRepoHeader() {
     const headerUserNode = gitHubDOM.getNode(".repo_app_header-user");
@@ -46,6 +48,18 @@ const fetchAndMapReposAction = async () => {
     // animateRepoHeader();
 };
 
+        Array.from(details).forEach((detail) => {
+             detail.addEventListener("toggle", event => {
+                 if (detail.open) {
+                     console.log('here open');
+                     /* the element was toggled open */
+                 } else {
+                     console.log('here closed');
+                     /* the element was toggled closed */
+                 }
+             });
+
+         })
 // fetchAndMapReposAction();
 
 setTimeout(() => {

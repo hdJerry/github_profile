@@ -311,6 +311,10 @@ font-weight: bold;
     /* background-color: #7263ca; */
 }
 
+.github_details details {
+    pointer-events: visible;
+}
+
 @media (max-width: 500px) {
     #main #profile .left,
     #main #profile .right {
@@ -374,9 +378,10 @@ font-weight: bold;
     box-shadow: var(--shadow-small);
 }
 
-.search_dropdown a{
+.search_dropdown p{
     border-top: 1px solid var(--color-border);
     display: block;
+    cursor: pointer;
 }
 
 .search_dropdown a:hover a{
@@ -387,6 +392,11 @@ font-weight: bold;
 .close_container{
     justify-content: space-between;
     padding: 2px 10px;
+}
+
+.close_container button:hover{
+    background-color: #fff!important;
+    color: var(--color-border)!important;
 }
 
 
