@@ -359,6 +359,11 @@ font-weight: bold;
 
 .tabs_header .right {
     justify-content: space-evenly;
+    transform: translateX(-50px);
+    -webkit-transform: translateX(-50px);
+    -moz-transform: translateX(-50px);
+    -ms-transform: translateX(-50px);
+    -o-transform: translateX(-50px);
 }
 
 .tabs_header .right .tab{
@@ -896,7 +901,12 @@ margin-right: 10px;
      .tabs_header .right{
          width: 100%;
          overflow: auto;
-     }
+         transform:unset;
+         -webkit-transform:unset;
+         -moz-transform:unset;
+         -ms-transform:unset;
+         -o-transform:unset;
+}
      .tabs_header .right svg{
          display:none;
      }
