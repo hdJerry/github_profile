@@ -174,15 +174,15 @@ const ProfilePage = async () => {
                         >
                         </div>
                         <div class="modal_section">
-                        <a href="/#">Your profile</a
-                        ><a href="/#">Your repositories</a
-                        ><a href="/#">Your organizations</a
-                        ><a href="/#">Your projects</a><a href="/#">Your stars</a
-                        ><a href="/#">Your gists</a>
+                        <a href="#">Your profile</a
+                        ><a href="#">Your repositories</a
+                        ><a href="#">Your organizations</a
+                        ><a href="#">Your projects</a><a href="/#">Your stars</a
+                        ><a href="#">Your gists</a>
                         </div>
                         <div class="modal_section">
-                        <a href="/#">Feature preview</a><a href="/#">Help</a
-                        ><a href="/#">Settings</a><a href="/#" onclick="signOut()">Sign out</a>
+                        <a href="#">Feature preview</a><a href="#">Help</a
+                        ><a href="#">Settings</a><a href="#" onclick="signOut()">Sign out</a>
                         </div>
                     </div>
                     </details>
