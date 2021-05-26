@@ -1,7 +1,13 @@
 * {
     margin: 0;
     padding: 0;
+    border: 0;
+    outline: none;
+    font-size: 14px;
+    text-decoration: none;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    background: transparent;
 }
 
 
@@ -432,8 +438,8 @@ body {
 
 /* Search filter header */
 .tabs_header {
-    padding: 0 16px;
-    max-width: 1280px;
+    /* padding: 0 16px; */
+    max-width: 1440px;
     margin: 10px auto 0;
     border-bottom: 1px solid #eaecef;
     justify-content: center;
@@ -462,12 +468,11 @@ body {
 
 .tabs_header .right,
 .tab_mb {
-    /* justify-content: space-evenly; */
-    transform: translateX(-30px);
-    -webkit-transform: translateX(-30px);
-    -moz-transform: translateX(-30px);
-    -ms-transform: translateX(-30px);
-    -o-transform: translateX(-30px);
+    transform: translateX(40px);
+    -webkit-transform: translateX(40px);
+    -moz-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    -o-transform: translateX(40px);
 }
 
 .tabs_header .right .tab,

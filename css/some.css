@@ -1,21 +1,5 @@
-body {
-    padding: 0;
-    margin: 0;
-    font-family: var(--font-family);
-    color: #24292e;
-}
 
-* {
-    background: transparent;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    outline: none;
-    font-size: 14px;
-    text-decoration: none;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
+
 
 input {
     font-family: var(--font-family);
@@ -49,16 +33,6 @@ details button::-webkit-details-marker {
     display: none;
 }
 
-
-
-.hv-undeline:hover {
-    text-decoration: underline;
-}
-
-.hv-undeline:hover:after,
-.hv-undeline:hover::before {
-    text-decoration: none;
-}
 
 
 
@@ -318,31 +292,6 @@ details button::-webkit-details-marker {
     color: #c8c9cb;
 }
 
-.repo_container {
-    padding-top: 20px;
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation-duration: 0.2s;
-    animation-duration: 0.2s;
-}
-
-.repo_container.hide {
-    display: none;
-}
-
-.repo_container .app_wrapper .app_max_width {
-    max-width: 1216px;
-}
-
-
-.repo_actions_header {
-    padding: 16px 0;
-    border-bottom: 1px solid var(--color-border);
-}
 
 @-webkit-keyframes fadeIn {
     0% {
@@ -419,11 +368,6 @@ details button::-webkit-details-marker {
     }
 }
 
-@media (max-width: 863px) {
-    .dsk {
-        display: none;
-    }
-}
 
 @media (max-width: 863px) {
     .app_wrapper {
