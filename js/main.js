@@ -633,6 +633,7 @@ function LoginPage() {
     let app = document.querySelector('#app');
 
     app.innerHTML = `
+    <div class="login_page flexbox">
         <div class="login flexbox">
             <div class="signin_logo">
                 <svg 
@@ -652,7 +653,7 @@ function LoginPage() {
             <label for="username">Username</label>
             <div class="input">
                 <input type="text" placeholder="Github username" id="username" autocomplete="false" autocapitalize="false" name="new-value">
-                 <img
+                <img
                     src="https://github.githubassets.com/images/search-key-slash.svg"
                     alt=""
                     srcset=""
@@ -664,6 +665,8 @@ function LoginPage() {
                 Submit
             </button>
         </div>
+    
+    </div>
     `;
 
     let submit = document.querySelector('#submit');
