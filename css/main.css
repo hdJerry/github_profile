@@ -88,6 +88,13 @@ body {
     margin-top: 10px;
     font-weight: 400;
     width: 100%;
+    position: relative;
+}
+
+.login .input .header_search_wrapper_slash-icon {
+    position: absolute;
+    right: 5px;
+    top: 5px;
 }
 
 .login .input input {

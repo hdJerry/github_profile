@@ -652,6 +652,12 @@ function LoginPage() {
             <label for="username">Username</label>
             <div class="input">
                 <input type="text" placeholder="Github username" id="username" autocomplete="false" autocapitalize="false" name="new-value">
+                 <img
+                    src="https://github.githubassets.com/images/search-key-slash.svg"
+                    alt=""
+                    srcset=""
+                    class="header_search_wrapper_slash-icon"
+                    />
             </div>
 
             <button class="submit" id="submit">
