@@ -35,6 +35,15 @@ details>summary::marker {
 }
 
 
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details button::-webkit-details-marker {
+    display: none;
+}
+
+
 
 .mbl {
     display: none;
