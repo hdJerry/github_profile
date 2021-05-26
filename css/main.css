@@ -66,7 +66,6 @@ body {
     -o-border-radius: 6px;
     background-color: var(--tertiary-color);
     padding: 10px;
-    display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
@@ -127,6 +126,22 @@ body {
     cursor: not-allowed;
 }
 
+
+.login .signin_logo{
+    align-self: center;
+    margin: 0 0 10px 0;
+    fill: #fff;
+    transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+}
+
+.login .signin_logo svg {
+    width: 70px;
+    height: 70px;
+}
 /* Login page ends */
 
 
