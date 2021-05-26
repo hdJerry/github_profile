@@ -30,7 +30,7 @@
 }
 
 body {
-    /* background-color: var(--primary-color); */
+    background-color: var(--tertiary-color);
     font-family: var(--font-family);
     font-size: 14px;
     line-height: 1.5;
@@ -73,6 +73,9 @@ body {
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+
+    box-shadow: 0px 0px 15px #01010182;
+    border: 5px solid #1d2126;
 }
 
 .login label {
