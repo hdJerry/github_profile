@@ -55,9 +55,45 @@ body {
 
 /* Login page starts */
 
+
+.alert {
+    position: absolute;
+    width: 250px;
+    right: 20px;
+    top: -1000px;
+    transition: top 1s ease-in-out;
+    -webkit-transition: top 1s ease-in-out;
+    -moz-transition: top 1s ease-in-out;
+    -ms-transition: top 1s ease-in-out;
+    -o-transition: top 1s ease-in-out;
+    /* color: var(--primary-color); */
+    color: #fff;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    box-shadow: 0 0 10px #01010182;
+    padding: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    justify-content: space-evenly;
+}
+
+.alert.active {
+    top: 50px;
+    background-color: red;
+}
+
+.alert svg {
+    fill: var(--primary-color);
+    cursor: pointer;
+}
+
 .login_page {
     height: 100vh;
     justify-content: center;
+    position: relative;
 }
 
 .login {
@@ -114,6 +150,10 @@ body {
 
 }
 
+.login .input input:disabled {
+    cursor: not-allowed;
+}
+
 .login #submit {
     border-radius: 6px;
     -webkit-border-radius: 6px;
@@ -139,6 +179,8 @@ body {
 
 .login #submit:disabled {
     cursor: not-allowed;
+    background-color: #ccc;
+    
 }
 
 

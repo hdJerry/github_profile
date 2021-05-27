@@ -640,14 +640,23 @@ const getProfile = (user) => {
         .then((result) => {
             console.log(result);
 
+             let alert = gitHubDOM.getNode('.alert'); //Invalid Username/User not found
+             let message = gitHubDOM.getNode('.message');
+
             if (result.data && result.data.user) {
 
                 sessionStorage.setItem('user', result.data.user.login);
                 sessionStorage.setItem('data', JSON.stringify(result.data))
                 ProfilePage();
             } else {
-                alert('Invalid Username/User not found')
-                LoginPage();
+                // alert('Invalid Username/User not found')
+
+                message.innerText = 'Invalid Username/User not found';
+                alert.classList.add('active');
+
+                setTimeout(() => {
+                    LoginPage();
+                }, 5000);
             }
         });
 
@@ -663,6 +672,13 @@ function LoginPage() {
 
     app.innerHTML = `
     <div class="login_page flexbox">
+
+    <div class="alert flexbox">
+        <p class="message"></p>
+        <svg  width="14" height="14" class="close" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="white"/>
+      </svg>
+    </div>
         <div class="login flexbox">
             <div class="signin_logo">
                 <svg 
@@ -698,16 +714,28 @@ function LoginPage() {
     </div>
     `;
 
-    let submit = document.querySelector('#submit');
+    let submit = gitHubDOM.getNode('#submit');
+    let close = gitHubDOM.getNode('.close');
+    let alert = gitHubDOM.getNode('.alert');
+    let message = gitHubDOM.getNode('.message');
+    close.addEventListener('click', () =>{
+        alert.classList.remove('active')
+    })
     submit.addEventListener('click', () => {
-        let user = document.querySelector('#username').value;
-        if (user && user.trim().length > 0) {
-            getProfile(user);
+        let user = gitHubDOM.getNode('#username');
+        if (user.value && user.value.trim().length > 0) {
+            getProfile(user.value);
             submit.innerText = "Processing...";
-            submit.disabled = "disabled"
+            submit.disabled = "disabled";
+            user.disabled = "disabled";
 
         } else {
-            alert('Invalid Username')
+          message.innerText  = 'Invalid Username';
+          alert.classList.add('active')
+
+          setTimeout(() => {
+               alert.classList.remove('active')
+          }, 5000);
         }
     });
 
