@@ -715,12 +715,19 @@ function LoginPage() {
     `;
 
     let submit = gitHubDOM.getNode('#submit');
+
+    // Alert components
     let close = gitHubDOM.getNode('.close');
     let alert = gitHubDOM.getNode('.alert');
     let message = gitHubDOM.getNode('.message');
+
     close.addEventListener('click', () =>{
         alert.classList.remove('active')
     })
+
+     // Alert components 
+
+     
     submit.addEventListener('click', () => {
         let user = gitHubDOM.getNode('#username');
         if (user.value && user.value.trim().length > 0) {
