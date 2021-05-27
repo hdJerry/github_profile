@@ -1,7 +1,4 @@
-let user = sessionStorage.getItem('user');
-
-const CLIENT_ID = "69ade597d283d5c5c8b9";
-const CLIENT_SECRET = "752d09a70235b7c3b20b3602e9910e15223204e2";
+let user = sessionStorage.getItem('user');//store username
 
 //encoded token to prevent auto removal by github.
 const GITHUB_ENCODED_TOKEN =
@@ -16,7 +13,7 @@ const gitHubDOM = {
 };
 
 
-
+// Function to Load Profile page after username confirmed
 const ProfilePage = async () => {
     let app = document.querySelector('#app');
     let {
@@ -28,7 +25,10 @@ const ProfilePage = async () => {
         <div id="main">
         <div class="app_wrapper app_header">
             <div class="app_header-container">
-            
+            ${ ''/*  
+                Nav bar contents 
+        
+                */ }
                 <button class="flex hamburger js_hamburger_btn">
                     <svg
                     height="24"
@@ -44,6 +44,7 @@ const ProfilePage = async () => {
                     ></path>
                     </svg>
                 </button>
+
             <div class="flex">
                 <svg 
                 class="octicon octicon-mark-github logo v-align-middle" 
@@ -192,8 +193,17 @@ const ProfilePage = async () => {
 
             </div>
 
+            ${ ''/*  
+                Nav bar contents ends
+        
+                */ }
+
         </div>
         <div class="tabs_header flexbox lg">
+        ${ ''/*  
+                Tab header
+        
+                */ }
             <div class="left flexbox hide special-left">
                 <span class="profile-picture-wrapper">
                     <img
@@ -240,9 +250,18 @@ const ProfilePage = async () => {
                   </a>
             </div>
         
+            ${ ''/*  
+                Tab header ends
+        
+                */ }
         </div>
 
             <div id="profile" class="app-container">
+
+            ${ ''/*  
+                Main Contents
+        
+                */ }
             
                 <div class="left">
                         <div class="pics_name flexbox">
@@ -414,6 +433,11 @@ const ProfilePage = async () => {
                 </div>
                     
                 </div>
+
+                ${ ''/*  
+                Main contents Ends
+        
+                */ }
             </div>
 
             <div class="app_page_loader">
@@ -433,6 +457,8 @@ const ProfilePage = async () => {
 
 
     let repo_container = document.querySelector('#repo_main');
+
+    // Populating with the repo values
     user.repositories.nodes.forEach((res) => {
 
         let div = document.createElement('div');
@@ -465,7 +491,7 @@ const ProfilePage = async () => {
 
                             ''
                         }
-
+                       
                         ${RepoOtherDetails({
                             count: res.stargazerCount,
                             svg: `<svg
@@ -530,16 +556,19 @@ const ProfilePage = async () => {
 
 
 
-    dropdownFunction();
+    dropdownFunction();//initiate the dropdown to prevent multiple dropdowns from opening
 
-    initHamBurgerMenu();
+    initHamBurgerMenu();//initiates the bugger menu
+
     if (user) {
-        fetchAndMapReposAction();
+        fetchAndMapReposAction();//initiates the loaded when pulling user data
 
     }
 
 };
 
+
+//Functions to pull user profiles/repos
 
 const getProfile = (user) => {
 
@@ -628,7 +657,7 @@ const getProfile = (user) => {
 
 
 
-
+// Page to input the username
 function LoginPage() {
     let app = document.querySelector('#app');
 
